@@ -1,8 +1,9 @@
-package be.intecbrussel;
+package be.intecbrussel.hoofdstuk07;
 
 import java.util.Scanner;
 
-public class Opdracht2 {
+public class Opdracht02 {
+
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         String text = userInput.nextLine();
