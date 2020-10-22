@@ -24,34 +24,34 @@ public class Opdracht17_8 {public static void main(String[] args) {
     }
 
 
-        int counter = 0;
-        System.out.println(2);
-        List<Integer> primeList = new ArrayList<>();
-
-        for (int number = 1_000_000 ; number <= 2_000_000 ; number += 2) {
-            boolean isPrime = true;
-
-            for (Integer dividers : primeList) {
-                if (dividers > Math.sqrt(number)) {
-                    break;
-                }
-
-                if (number % dividers == 0) {
-                    isPrime = false;
-                    break;
-            }
-
-
-            }
-
-            if (isPrime) {
-                counter++;
-                primeList.add(number);
-                System.out.println(number);
-            }
-
-        }
-
-
+//        int counter = 0;
+//        System.out.println(2);
+////        List<Integer> primeList = new ArrayList<>();
+//
+//        for (int number = 1_000_000 ; number <= 2_000_000 ; number += 2) {
+//            boolean isPrime = true;
+//
+//            for (Integer dividers : primeList) {
+//                if (dividers > Math.sqrt(number)) {
+//                    break;
+//                }
+//
+//                if (number % dividers == 0) {
+//                    isPrime = false;
+//                    break;
+//            }
+//
+//
+//            }
+//
+//            if (isPrime) {
+//                counter++;
+//                primeList.add(number);
+//                System.out.println(number);
+//            }
+//
+//        }
+//
+//
 }
 }
