@@ -5,11 +5,11 @@ public class Opdracht01_BubbleSort {
     // Driver program
     public static void main(String args[]) {
 
-        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-        int n = arr.length;
-        bubbleSort(arr, n);
+        int numberArr[] = { 64, 34, 25, 12, 22, 11, 90 };
+        int n = numberArr.length;
+        bubbleSort(numberArr, n);
         System.out.println("Sorted array: ");
-        printArray(arr, n);
+        printArray(numberArr, n);
     }
     static void bubbleSort(int[] arr, int lengthArr) {
 

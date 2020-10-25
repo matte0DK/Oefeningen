@@ -2,9 +2,9 @@ package be.intecbrussel.hoofdstuk05;
 
 public class Opdracht17_8 {public static void main(String[] args) {
 
-//main
     for (int number = 2 ; number <= 1_000 ; number++) {
-//methode om te bepalen of nummer prime is
+
+        //methode om te bepalen of nummer prime is
 
         boolean isPrime = true;
 
