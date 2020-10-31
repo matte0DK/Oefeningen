@@ -34,11 +34,11 @@ public class AutoApp {
         // OPDRACHT 5
         System.out.println("Opdracht 5\n");
 
-        myRedCar.printMethode(myRedCar);
+        Auto.printMethode(myRedCar);
         System.out.println("------------------------------");
-        myBiggerEngineCar.printMethode(myBiggerEngineCar);
+        Auto.printMethode(myBiggerEngineCar);
         System.out.println("------------------------------");
-        my5kmCar.printMethode(my5kmCar);
+        Auto.printMethode(my5kmCar);
         System.out.println("------------------------------");
 
         // OPDRACHT 6

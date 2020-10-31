@@ -129,7 +129,7 @@ public class Auto {
         }
     }
 
-    public void printMethode(Auto myCars) {
+    public static void printMethode(Auto myCars) {
         System.out.println(myCars.getSpeed());
         System.out.println(myCars.getHorsepower());
         System.out.println(myCars.getColor());

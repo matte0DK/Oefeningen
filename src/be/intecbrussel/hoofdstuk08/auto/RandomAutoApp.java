@@ -11,11 +11,11 @@ public class RandomAutoApp {
         Auto secondRandomCar = new Auto(Math.abs(rand.nextInt(500)));
         Auto thirdRandomCar = new Auto(rand.nextBoolean());
 
-        firstRandomCar.printMethode(firstRandomCar);
+        Auto.printMethode(firstRandomCar);
         System.out.println("-----------------------");
-        secondRandomCar.printMethode(secondRandomCar);
+        Auto.printMethode(secondRandomCar);
         System.out.println("-----------------------");
-        thirdRandomCar.printMethode(thirdRandomCar);
+        Auto.printMethode(thirdRandomCar);
         System.out.println("-----------------------");
 
 
@@ -32,7 +32,7 @@ public class RandomAutoApp {
         for (int i = 0; i < myRandomCarArr.length; i++) {
             myRandomCarArr[i] = new Auto();
             myRandomCarArr[i].park();
-            myRandomCarArr[i].printMethode(myRandomCarArr[i]);
+            Auto.printMethode(myRandomCarArr[i]);
         }
     }
 }
