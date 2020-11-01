@@ -53,7 +53,7 @@ public class Auto {
 
     // Random car constructor!
     public Auto() {
-        this(   Auto.myRandSpeed(),
+        this(Auto.myRandSpeed(),
                 Auto.myRandomHorsepower(),
                 Auto.myRandomColor(),
                 Auto.myRandomLight());
@@ -129,13 +129,14 @@ public class Auto {
             this.lights = true;
         }
     }
-
+    // myCar printer
     public static void printMethode(Auto myCars) {
         System.out.println("speed: " + myCars.getSpeed());
         System.out.println("hp: " + myCars.getHorsepower());
         System.out.println("color: " + myCars.getColor());
         System.out.println("lights: " + myCars.getLights());
     }
+    // random printer
     public static void randomPrintMethod(Auto random) {
         System.out.println("speed: " + myRandSpeed());
         System.out.println("hp: " + myRandomHorsepower());
