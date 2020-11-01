@@ -51,12 +51,13 @@ public class Auto {
         this(0, 100, "white", lights);
     }
 
+    // Random car constructor!
     public Auto() {
-        this((int) Auto.myRandSpeed(),
+        this(   Auto.myRandSpeed(),
                 Auto.myRandomHorsepower(),
                 Auto.myRandomColor(),
                 Auto.myRandomLight());
-        // Random car constructor!
+
     }
 
     // SETTERS
@@ -130,10 +131,16 @@ public class Auto {
     }
 
     public static void printMethode(Auto myCars) {
-        System.out.println(myCars.getSpeed());
-        System.out.println(myCars.getHorsepower());
-        System.out.println(myCars.getColor());
-        System.out.println(myCars.getLights());
+        System.out.println("speed: " + myCars.getSpeed());
+        System.out.println("hp: " + myCars.getHorsepower());
+        System.out.println("color: " + myCars.getColor());
+        System.out.println("lights: " + myCars.getLights());
+    }
+    public static void randomPrintMethod(Auto random) {
+        System.out.println("speed: " + myRandSpeed());
+        System.out.println("hp: " + myRandomHorsepower());
+        System.out.println("color: " + myRandomColor());
+        System.out.println("lights: " + myRandomLight());
     }
 
     public static int getCount() {
@@ -142,9 +149,9 @@ public class Auto {
 
 
     // OPDRACHT 8 RANDOM.UTIL
-    public static double myRandSpeed() {
+    public static int myRandSpeed() {
         Random rand = new Random();
-        double randSpeed = Math.abs((double) rand.nextInt(100));
+        int randSpeed = Math.abs(rand.nextInt(100));
         return randSpeed;
     }
 
@@ -166,7 +173,6 @@ public class Auto {
 
     public static boolean myRandomLight() {
         Random rand = new Random();
-        boolean randLights = rand.nextBoolean();
-        return randLights;
+        return rand.nextBoolean();
     }
 }

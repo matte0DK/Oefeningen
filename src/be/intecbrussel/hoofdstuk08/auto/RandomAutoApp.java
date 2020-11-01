@@ -7,7 +7,7 @@ public class RandomAutoApp {
         // OPDRACHT 7
         Random rand = new Random();
 
-        Auto firstRandomCar = new Auto(Math.abs((double) rand.nextInt(300)));
+        Auto firstRandomCar = new Auto(Math.abs(rand.nextInt(100)));
         Auto secondRandomCar = new Auto(Math.abs(rand.nextInt(500)));
         Auto thirdRandomCar = new Auto(rand.nextBoolean());
 
@@ -18,8 +18,6 @@ public class RandomAutoApp {
         Auto.printMethode(thirdRandomCar);
         System.out.println("-----------------------");
 
-
-
         // OPDRACHT 9
 
         Auto[] myRandomCarArr = new Auto[20];
@@ -27,12 +25,13 @@ public class RandomAutoApp {
         for (int i = 0; i < myRandomCarArr.length; i++) {
             myRandomCarArr[i] = new Auto();
             System.out.println(myRandomCarArr[i].getSpeed());
-        }
+        }   System.out.println("-----------------------");
 
         for (int i = 0; i < myRandomCarArr.length; i++) {
             myRandomCarArr[i] = new Auto();
             myRandomCarArr[i].park();
-            Auto.printMethode(myRandomCarArr[i]);
+            System.out.println("____RANDOM[" + i + "]____");
+            Auto.randomPrintMethod(myRandomCarArr[i]);
         }
     }
 }
