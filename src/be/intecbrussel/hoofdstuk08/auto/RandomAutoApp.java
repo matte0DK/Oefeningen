@@ -5,11 +5,10 @@ import java.util.Random;
 public class RandomAutoApp {
     public static void main(String[] args) {
         // OPDRACHT 7
-        Random rand = new Random();
 
-        Auto firstRandomCar = new Auto(Math.abs(rand.nextInt(100)));
-        Auto secondRandomCar = new Auto(Math.abs(rand.nextInt(500)));
-        Auto thirdRandomCar = new Auto(rand.nextBoolean());
+        Auto firstRandomCar = new Auto(Auto.myRandomSpeed());
+        Auto secondRandomCar = new Auto(Auto.myRandomHorsepower());
+        Auto thirdRandomCar = new Auto(Auto.myRandomLight());
 
         Auto.printMethode(firstRandomCar);
         System.out.println("-----------------------");
@@ -23,15 +22,16 @@ public class RandomAutoApp {
         Auto[] myRandomCarArr = new Auto[20];
 
         for (int i = 0; i < myRandomCarArr.length; i++) {
-            myRandomCarArr[i] = new Auto();
+            myRandomCarArr[i] = Auto.createRandomCar();
             System.out.println(myRandomCarArr[i].getSpeed());
-        }   System.out.println("-----------------------");
+        }
+        System.out.println("-----------------------");
 
         for (int i = 0; i < myRandomCarArr.length; i++) {
-            myRandomCarArr[i] = new Auto();
+            myRandomCarArr[i] = Auto.createRandomCar();
             myRandomCarArr[i].park();
             System.out.println("____RANDOM[" + i + "]____");
-            Auto.randomPrintMethod(myRandomCarArr[i]);
+            Auto.printMethode(myRandomCarArr[i]);
         }
     }
 }
