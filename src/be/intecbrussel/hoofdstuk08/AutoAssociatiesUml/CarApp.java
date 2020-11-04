@@ -9,10 +9,10 @@ public class CarApp {
         // Drivers
         Person myNewPerson = new Person("Jeans-Jeans", 54);
         Person mySecondPerson = new Person("Jeans-Jeacque", 45);
-        Person dieter = new Person("Dieter", 27);
-        Person samantha = new Person("Samantha" , 19);
-        Person kimberly = new Person("Kimberly" , 18);
-        Person chelsey = new Person("Chelsey" , 19);
+        Person marcel = new Person("Marcel", 57);
+        Person samantha = new Person("Samantha" , 18);
+        Person kimberly = new Person("Kimberly" , 21);
+        Person chelsey = new Person("Chelsey" , 36);
 
 
         // colors
@@ -33,7 +33,7 @@ public class CarApp {
         yellowPeugeot.setDriver(myNewPerson);
         redFerrari.setDriver(mySecondPerson);
 
-        suspiciousVan.setPassengers(dieter, 0);
+        suspiciousVan.setPassengers(marcel, 0);
         suspiciousVan.setPassengers(kimberly, 1);
         suspiciousVan.setPassengers(chelsey, 2);
         suspiciousVan.setPassengers(samantha, 3);
