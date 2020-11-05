@@ -1,6 +1,20 @@
 package be.intecbrussel.hoofdstuk08.rectangle;
 
 public class Rectangle {
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "DESCRIPTION='" + DESCRIPTION + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                ", x=" + x +
+                ", y=" + y +
+                ", corners=" + corners +
+                '}';
+    }
+
+    public final String DESCRIPTION = "Rectangle";
+
     private static int count = 0;
     public static final int ANGLES;
 
