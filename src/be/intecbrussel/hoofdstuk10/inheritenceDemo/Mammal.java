@@ -1,8 +1,16 @@
 package be.intecbrussel.hoofdstuk10.inheritenceDemo;
 
 public abstract class Mammal {
+    private String name;
+
+    public Mammal(String name) {
+        this.name = name;
+    }
 
     private String spine = "Default Spine";
+
+    public Mammal(Mammal newMammal) {
+        this.name = newMammal.name; }
 
     public String getSpine() { return this.spine; }
 

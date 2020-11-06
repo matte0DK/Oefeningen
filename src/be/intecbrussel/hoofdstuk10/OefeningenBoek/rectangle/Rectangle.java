@@ -66,9 +66,7 @@ public class Rectangle {
         width = Math.abs(newWidth);
     }
 
-    public void setHeight(int newHeight) {
-        height = Math.abs(newHeight);
-    }
+    public void setHeight(int newHeight) { height = Math.abs(newHeight); }
 
     public void setPositions(int newX, int newY) {
         x = newX;

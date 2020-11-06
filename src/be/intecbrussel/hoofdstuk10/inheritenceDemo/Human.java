@@ -4,6 +4,12 @@ public class Human extends Mammal{
 
     private String spine = "Human Spine";
 
+    public Human(String name) {
+        super(name);
+    }
+
+    public Human() { this("jolien"); }
+
     // setters
     @Override
     public void setSpine(String spine) { this.spine = spine; }
@@ -12,12 +18,15 @@ public class Human extends Mammal{
     @Override
     public String getSpine() { return this.spine; }
 
+    public String getDefaultSpine() { return super.getSpine(); }
+
     @Override
     public void attack() {
         System.out.println("humans can shoot each other");
     }
 
-    public String getDefaultSpine() { return super.getSpine(); }
-
+    public void eat() {
+        System.out.println("we eating");
+    }
 
 }

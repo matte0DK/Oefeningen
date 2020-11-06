@@ -6,29 +6,27 @@ public class Square extends Rectangle {
     public String toString() {
     return "Square{" +
             "side=" + side +
-            ", DESCRIPTION='" + DESCRIPTION + '\'' +
+            ", GEOMETRICAL SHAPE ='" + DESCRIPTION + '\'' +
             '}';
 }
     private int side;
     public final String DESCRIPTION = "Square";
 
-
-
+    // constructors
     public Square() {
-        super();
+        this(10,1,1);
     }
 
     public Square(int side) {
-        super(side, side);
+        this(side, 1,1);
     }
 
-    public Square(int side, int xPos, int yPos) {
-        super(side, side, xPos, yPos);
-    }
+    public Square(int side, int xPos, int yPos) { super(side, side, xPos, yPos); }
 
     public Square(Square square) {
-        super(square);
+        this(square.getSide(), square.getxPos(), square.getyPos());
     }
+
 
     // setters
     public void setSide(int side) {
@@ -37,13 +35,13 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public void setHeight(int h) {
-        setSide(h);
+    public void setHeight(int height) {
+        setSide(height);
     }
 
     @Override
-    public void setWidth(int w) {
-        setSide(w);
+    public void setWidth(int width) {
+        setSide(width);
     }
 
     // getters
