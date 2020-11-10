@@ -13,17 +13,18 @@ public class Triangle extends Shape {
 
     // constructors
     public Triangle() {
-        this(2, 3, 0, 0);
+        this(2, 3, -2, 0,0);
     }
 
-    public Triangle(int width, int height) {
-        this(width, height, 0, 0);
+    public Triangle(int width, int height, int perpendicular) {
+        this(width, height, perpendicular, 0, 0);
     }
 
-    public Triangle(int width, int height, int xPos, int yPos) {
+    public Triangle(int width, int height, int perpendicular, int xPos, int yPos) {
         super(xPos, yPos);
         this.width = width;
         this.height = height;
+        this.perpendicular = perpendicular;
     }
 
     // setters
@@ -60,15 +61,27 @@ public class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return 0;
-    }  // <=
+        double hypotenuse1 = 0;
+        double hypotenuse2 = 0;
+
+        if (perpendicular < 0) {
+            hypotenuse1 = Math.hypot(this.height, Math.abs(this.perpendicular));
+            hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
+        } else if (perpendicular > width) {
+            hypotenuse1 = Math.hypot(this.height, (this.perpendicular - this.width));
+            hypotenuse2 = Math.hypot(this.height, this.perpendicular);
+        } else {
+            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
+            hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
+        }
+        return this.width + hypotenuse1 + hypotenuse2;
+    }
 
     public static int getCount() {
         return count;
     }
 
     // toString
-
     @Override
     public String toString() {
         return "Triangle{" +
