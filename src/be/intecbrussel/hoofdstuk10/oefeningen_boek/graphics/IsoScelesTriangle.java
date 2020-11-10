@@ -16,6 +16,7 @@ public final class IsoScelesTriangle extends Triangle{
 
     public IsoScelesTriangle(int width, int height) {
         this(width, height, 0, 0);
+        this.setPerpendicular(width / 2);
     }
 
     public IsoScelesTriangle(int width, int height, int xPos, int yPos) {
