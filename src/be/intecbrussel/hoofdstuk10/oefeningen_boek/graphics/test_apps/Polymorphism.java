@@ -1,7 +1,7 @@
-package be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.test_apps;
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
 
-import be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.Rectangle;
-import be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.Square;
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Rectangle;
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Square;
 
 public class Polymorphism {
     public static void main(String[] args) {

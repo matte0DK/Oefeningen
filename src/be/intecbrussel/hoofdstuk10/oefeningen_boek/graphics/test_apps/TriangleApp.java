@@ -1,0 +1,14 @@
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
+
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Triangle;
+
+public class TriangleApp {
+    public static void main(String[] args) {
+        Triangle myTriangle = new Triangle(10, 5, -2); // gelijkvormig met myThirdTriangle
+        Triangle mySecondTriangle = new Triangle(10, 5, 2);
+        Triangle myThirdTriangle = new Triangle(10, 5, 12);
+        System.out.println(myTriangle.getPerimeter());
+        System.out.println(mySecondTriangle.getPerimeter());
+        System.out.println(myThirdTriangle.getPerimeter());
+    }
+}

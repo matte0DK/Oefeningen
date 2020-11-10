@@ -1,6 +1,6 @@
-package be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.test_apps;
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
 
-import be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.Square;
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Square;
 
 public class SquareApp {
     public static void main(String[] args) {

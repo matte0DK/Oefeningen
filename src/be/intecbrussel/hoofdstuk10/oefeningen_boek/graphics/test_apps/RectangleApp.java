@@ -1,6 +1,6 @@
-package be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.test_apps;
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
 
-import be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie.Rectangle;
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Rectangle;
 
 public class RectangleApp {
 

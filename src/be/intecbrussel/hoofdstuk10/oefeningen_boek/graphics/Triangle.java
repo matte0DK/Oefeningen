@@ -1,4 +1,4 @@
-package be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie;
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 public class Triangle extends Shape {
 
@@ -61,11 +61,11 @@ public class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        double hypotenuse1 = 0;
-        double hypotenuse2 = 0;
+        double hypotenuse1;
+        double hypotenuse2;
 
         if (perpendicular < 0) {
-            hypotenuse1 = Math.hypot(this.height, Math.abs(this.perpendicular));
+            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
             hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
         } else if (perpendicular > width) {
             hypotenuse1 = Math.hypot(this.height, (this.perpendicular - this.width));

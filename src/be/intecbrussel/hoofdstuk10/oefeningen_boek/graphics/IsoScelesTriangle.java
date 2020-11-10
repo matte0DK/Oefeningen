@@ -1,4 +1,4 @@
-package be.intecbrussel.hoofdstuk10.oefeningen_boek.geometrie;
+package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 public final class IsoScelesTriangle extends Triangle{
 
@@ -30,11 +30,13 @@ public final class IsoScelesTriangle extends Triangle{
     @Override
     public void setWidth(int width) {
         super.setWidth(width);
+        super.setPerpendicular(width/2);
     }
 
     @Override
     public void setPerpendicular(int perpendicular) {
         super.setPerpendicular(perpendicular);
+        super.setWidth(perpendicular * 2);
     }
 
     // getters
