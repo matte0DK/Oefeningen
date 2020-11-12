@@ -4,7 +4,6 @@ public class Opdracht01 {
 
     public enum Day {
 
-
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
 
         public boolean isWeekDay() {
@@ -89,10 +88,11 @@ public class Opdracht01 {
 
         //coin enum
         Coin[] coins = Coin.values();
-        float totalAmount = 0;
+        float totalAmount = 0.0f;
 
-        for (int i = 0; i < coins.length; i++) {
-            totalAmount += coins[i].getValue();
+        for (Coin coin :
+                coins) {
+            totalAmount += coin.getValue();
         }
 
         System.out.println(totalAmount - (float) Coin.TWENTY_CENT.getValue());
