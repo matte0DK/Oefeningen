@@ -5,9 +5,7 @@ public final class Square extends Rectangle {
     //class members
     private static int count = 0;
 
-    {
-        count++;
-    }
+    { count++; }
 
     // instance members
 
@@ -55,7 +53,8 @@ public final class Square extends Rectangle {
     @Override
     public String toString() {
         return "Square{" +
-                "DESCRIPTION='" + DESCRIPTION + '\'' +
                 "} " + super.toString();
     }
+
+
 }

@@ -3,8 +3,8 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 public class Triangle extends Shape {
 
     // class members
-    public static final int ANGLES = 3;
     private static int count;
+    public static final int ANGLES = 3;
 
     // instance members
     private int height;
@@ -61,19 +61,10 @@ public class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        double hypotenuse1;
-        double hypotenuse2;
 
-        if (perpendicular < 0) {
-            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
-            hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
-        } else if (perpendicular > width) {
-            hypotenuse1 = Math.hypot(this.height, (this.perpendicular - this.width));
-            hypotenuse2 = Math.hypot(this.height, this.perpendicular);
-        } else {
-            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
-            hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
-        }
+        double hypotenuse1 = Math.hypot(this.height, this.perpendicular);
+        double hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
+
         return this.width + hypotenuse1 + hypotenuse2;
     }
 
@@ -91,3 +82,21 @@ public class Triangle extends Shape {
                 "} " + super.toString();
     }
 }
+//  OVERRIDE PERIMETER ORIGINAL CODE
+//        if (perpendicular < 0) {
+//            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
+//            hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
+//        } else if (perpendicular > width) {
+//            hypotenuse1 = Math.hypot(this.height, (this.perpendicular - this.width));
+//            hypotenuse2 = Math.hypot(this.height, this.perpendicular);
+//        } else {
+//            hypotenuse1 = Math.hypot(this.height, this.perpendicular);
+//            hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
+//        }
+
+//        if (this.perpendicular < 0) {
+//            hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
+//        } else if (this.perpendicular > width) {
+//            hypotenuse1 = Math.hypot(this.height, (this.perpendicular - this.width));
+//            hypotenuse2 = Math.hypot(this.height, this.perpendicular);
+//        }

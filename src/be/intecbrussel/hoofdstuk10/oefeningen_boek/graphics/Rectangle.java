@@ -1,24 +1,18 @@
 package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
-public class Rectangle extends Shape{
+import java.util.Objects;
+
+public class Rectangle extends Shape {
 
     // class members
     private static int count = 0;
     public static final int ANGLES = 4;
 
+    { count++; }
+
     // instance members
     private int width;
     private int height;
-    private int corners;
-    public final String DESCRIPTION = "Rectangle";
-
-//    static {
-//        ANGLES = 4;
-//    }
-
-    {
-        count++;
-    }
 
     // constructors
     public Rectangle() {
@@ -27,22 +21,24 @@ public class Rectangle extends Shape{
 
 
     public Rectangle(int width, int height) {
-        this.width = width;
-        this.height = height;
+        setWidth(width);
+        setHeight(height);
 //        count++;
     }
 
     public Rectangle(int width, int height, int xPos, int yPos) {
-        super(xPos,yPos);
-        this.width = width;
-        this.height = height;
+        setPositions(xPos, yPos);
+        setWidth(width);
+        setHeight(height);
     }
 
     /* copy constructor */
     public Rectangle(Rectangle newRectangle) {
-        this.width = newRectangle.width;
-        this.height = newRectangle.height;
-        this.corners = newRectangle.corners;
+        this(newRectangle.width, newRectangle.height, newRectangle.getX(), newRectangle.getY());
+//        setWidth(newRectangle.width);
+//        setHeight(newRectangle.height);
+//        setPositions(newRectangle.getX(), newRectangle.getY());
+
         /* this(newRectangle.width, newRectangle.height, newRectangle.x, newRectangle.y); */
     }
 
@@ -51,8 +47,9 @@ public class Rectangle extends Shape{
         width = Math.abs(newWidth);
     }
 
-    public void setHeight(int newHeight) { height = Math.abs(newHeight); }
-
+    public void setHeight(int newHeight) {
+        height = Math.abs(newHeight);
+    }
 
     // getters
     public int getWidth() {
@@ -81,14 +78,33 @@ public class Rectangle extends Shape{
         return count;
     }
 
-    // toString
+    // toString method
     @Override
     public String toString() {
         return "Rectangle{" +
                 "width=" + width +
                 ", height=" + height +
-                ", corners=" + corners +
-                ", DESCRIPTION='" + DESCRIPTION + '\'' +
                 "} " + super.toString();
     }
+
+    // equals method
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return width == rectangle.width &&
+                height == rectangle.height;
+    }
+
+    // hashCode method
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), width, height);
+    }
+
+
+
+
 }

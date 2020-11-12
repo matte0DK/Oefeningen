@@ -14,10 +14,7 @@ public final class IsoScelesTriangle extends Triangle{
         this(10,20,3,3);
     }
 
-    public IsoScelesTriangle(int width, int height) {
-        this(width, height, 0, 0);
-        this.setPerpendicular(width / 2);
-    }
+    public IsoScelesTriangle(int width, int height) { super(width,height,width/2); }
 
     public IsoScelesTriangle(int width, int height, int xPos, int yPos) {
         super(width, height, width/2 , xPos ,yPos);
@@ -46,7 +43,6 @@ public final class IsoScelesTriangle extends Triangle{
     }
 
     // toString
-
     @Override
     public String toString() {
         return "IsoScelesTriangle{} " + super.toString();

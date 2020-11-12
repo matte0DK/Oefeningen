@@ -4,18 +4,12 @@ public final class Circle extends Shape{
 
     // class members
     private static int count;
-    public static final int ANGLES;
+    public static final int ANGLES = 0;
+
+    { count++; }
 
     // instance members
     private int radius;
-
-    static {
-        ANGLES = 0;
-    }
-
-    {
-        count++;
-    }
 
     // constructors
     public Circle() {
@@ -52,13 +46,12 @@ public final class Circle extends Shape{
 
     @Override
     public double getPerimeter() {
-        return 2 * Math.PI * this.radius;
+        return 2 * this.radius * Math.PI ;
     }
 
     //grow methode
-    public int grow(int d) {
+    public void grow(int d) {
         this.radius *= Math.abs(d);
-        return this.radius;
     }
 
     //cosinus method
@@ -75,7 +68,6 @@ public final class Circle extends Shape{
     }
 
     // toString
-
     @Override
     public String toString() {
         return "Circle{" +
