@@ -12,7 +12,7 @@ public class Opdracht01 {
 
         @Override
         public String toString() {
-            return super.toString() + ", weekday = " + this.isWeekDay();
+            return name() + ", weekday = " + this.isWeekDay();
         }
     }
 
@@ -27,7 +27,7 @@ public class Opdracht01 {
         ONE_EURO(1.00),
         TWO_EURO(2.00);
 
-        private double value;
+        private final double value;
 
         private Coin(double value) {
             this.value = value;
@@ -38,11 +38,7 @@ public class Opdracht01 {
         }
 
         @Override
-        public String toString() {
-            return name() +
-                    "(" + value +
-                    ") ";
-        }
+        public String toString() { return name() + "(" + value + ") "; }
     }
 
     public enum Planet {
@@ -57,8 +53,8 @@ public class Opdracht01 {
         NEPTUNE(1.0243 * (Math.pow(10,26)), 4.498 * (Math.pow(10,9))),
         PLUTO(1.302 * (Math.pow(10,22)), 5.9068 * (Math.pow(10,9)));
 
-        private float mass;
-        private float distance;
+        private final float mass;
+        private final float distance;
 
         private Planet(double mass, double distance) {
             this.mass = (float)mass;
@@ -67,10 +63,9 @@ public class Opdracht01 {
 
         @Override
         public String toString() {
-            return name() +
-                    ", mass= " + mass + "(kg)" +
-                    ", distance= " + distance + "(km)" +
-                    "} ";
+            return name() + ", mass= " + mass + "(kg)" +
+                            ", distance= " + distance + "(km)" +
+                            "} ";
         }
     }
 
@@ -95,7 +90,7 @@ public class Opdracht01 {
             totalAmount += coin.getValue();
         }
 
-        System.out.println(totalAmount - (float) Coin.TWENTY_CENT.getValue());
+        System.out.println(totalAmount - (float) Coin.FIFTY_CENT.getValue() + (float) Coin.ONE_EURO.getValue());
 
         System.out.println("-----------------------------------");
 
