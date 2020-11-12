@@ -61,7 +61,7 @@ public class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
-
+        // fully optimised, check code below to see steps until final answer.
         double hypotenuse1 = Math.hypot(this.height, this.perpendicular);
         double hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
 
@@ -94,6 +94,7 @@ public class Triangle extends Shape {
 //            hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
 //        }
 
+// Optimised first code
 //        if (this.perpendicular < 0) {
 //            hypotenuse2 = Math.hypot(this.height, (Math.abs(this.perpendicular) + this.width));
 //        } else if (this.perpendicular > width) {
