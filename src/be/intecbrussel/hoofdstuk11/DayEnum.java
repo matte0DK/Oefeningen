@@ -25,38 +25,27 @@ public class DayEnum {
 
         private static final Coin[] coins = Coin.values();
 
-        public double getValue(Coin coins) {
+        public double getValue(Enum coins) {
             double value = 0;
-            switch (coins) {
-                case ONE_CENT:
-                    value += 0.01;
-                    break;
-                case TWO_CENT:
-                    value += 0.02;
-                    break;
-                case FIVE_CENT:
-                    value += 0.05;
-                    break;
-                case TEN_CENT:
-                    value += 0.10;
-                    break;
-                case TWENTY_CENT:
-                    value += 0.20;
-                    break;
-                case FIFTY_CENT:
-                    value += 0.50;
-                    break;
-                case ONE_EURO:
-                    value += 1.00;
-                    break;
-                case TWO_EURO:
-                    value += 2.00;
-                    break;
-
+            if (Coin.ONE_CENT.equals(coins)) {
+                value += 0.01;
+            } else if (Coin.TWO_CENT.equals(coins)) {
+                value += 0.02;
+            } else if (Coin.FIVE_CENT.equals(coins)) {
+                value += 0.05;
+            } else if (Coin.TEN_CENT.equals(coins)) {
+                value += 0.10;
+            } else if (Coin.TWENTY_CENT.equals(coins)) {
+                value += 0.20;
+            } else if (Coin.FIFTY_CENT.equals(coins)) {
+                value += 0.50;
+            } else if (Coin.ONE_EURO.equals(coins)) {
+                value += 1.00;
+            } else if (Coin.TWO_EURO.equals(coins)) {
+                value += 2.00;
             }
             return value;
         }
-
 
     }
 
@@ -64,21 +53,32 @@ public class DayEnum {
 
         Day[] days = Day.values();
 
-        for (Day day :
-                days) {
-            System.out.println(day.toString());
-        }
-
         Random generator = new Random();
         int size = generator.nextInt(20) + 1;
         Coin[] coins = new Coin[size];
         float totalAmount = 0f;
 
-        for (int i = 0; i < coins.length - 1; i++) {
-            System.out.println(coins[i] = Coin.coins[generator.nextInt(Coin.coins.length)]);
+        //day enum
+        for (Day day :
+                days) {
+            System.out.println(day.toString());
+        }
+
+        System.out.println("-----------------------------------");
+
+        //coin enum
+        for (int i = 0; i < coins.length; i++) {
+            coins[i] = Coin.coins[generator.nextInt(Coin.coins.length)];
             totalAmount += coins[i].getValue(coins[i]);
         }
 
-        System.out.println(totalAmount);
+        for (Coin coin :
+                coins) {
+            System.out.print(coin.name() + ", ");
+        }
+
+        System.out.println("= " + totalAmount);
+
+
     }
 }
