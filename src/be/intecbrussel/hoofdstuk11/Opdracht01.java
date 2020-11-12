@@ -1,6 +1,6 @@
 package be.intecbrussel.hoofdstuk11;
 
-public class DayEnum {
+public class Opdracht01 {
 
     public enum Day {
 
