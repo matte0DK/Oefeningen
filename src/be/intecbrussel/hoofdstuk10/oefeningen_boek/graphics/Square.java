@@ -55,6 +55,4 @@ public final class Square extends Rectangle {
         return "Square{" +
                 "} " + super.toString();
     }
-
-
 }

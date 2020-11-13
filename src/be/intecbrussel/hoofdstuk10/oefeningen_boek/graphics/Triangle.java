@@ -1,5 +1,7 @@
 package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
+import java.util.Objects;
+
 public class Triangle extends Shape {
 
     // class members
@@ -80,6 +82,24 @@ public class Triangle extends Shape {
                 ", width=" + width +
                 ", perpendicular=" + perpendicular +
                 "} " + super.toString();
+    }
+
+    //equals
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Triangle triangle = (Triangle) o;
+        return height == triangle.height &&
+                width == triangle.width &&
+                perpendicular == triangle.perpendicular;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), height, width, perpendicular);
     }
 }
 //  OVERRIDE PERIMETER ORIGINAL CODE

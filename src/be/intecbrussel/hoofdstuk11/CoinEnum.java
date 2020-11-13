@@ -1,5 +1,7 @@
 package be.intecbrussel.hoofdstuk11;
 
+import java.util.Random;
+
 public class CoinEnum {
 
     public enum Coin {
@@ -31,7 +33,13 @@ public class CoinEnum {
 
     public static void main(String[] args) {
 
-        Coin[] coins = Coin.values();
+        Coin[] coins = new Coin[10];
+        Random generator = new Random();
+
+        for (int i = 0; i < coins.length; i++) {
+            int j = generator.nextInt(11);
+            coins[i] = Coin.values()[j];
+        }
         float totalAmount = 0.0f;
 
         for (Coin coin :

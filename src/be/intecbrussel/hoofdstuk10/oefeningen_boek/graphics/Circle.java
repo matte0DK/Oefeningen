@@ -1,5 +1,7 @@
 package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
+import java.util.Objects;
+
 public final class Circle extends Shape{
 
     // class members
@@ -73,5 +75,20 @@ public final class Circle extends Shape{
         return "Circle{" +
                 "radius=" + radius +
                 "} " + super.toString();
+    }
+
+    //equals
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Circle circle = (Circle) o;
+        return radius == circle.radius;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), radius);
     }
 }

@@ -60,8 +60,17 @@ public abstract class Shape {
 
     public abstract double getPerimeter();
 
-    // equals method
 
+    // toString
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
+    // equals method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,12 +80,13 @@ public abstract class Shape {
                 y == shape.y;
     }
 
+    // hashCode method
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
     }
 
 
-    // hashCode method
+
 
 }
