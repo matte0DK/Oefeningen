@@ -3,7 +3,7 @@ package be.intecbrussel.hoofdstuk13.opdracht03;
 public class MyPig implements Pig{
     @Override
     public void grunt() {
-        System.out.println("knor knor");
+        System.out.println("REEEEEE");
     }
 
     public static void main(String[] args) {
