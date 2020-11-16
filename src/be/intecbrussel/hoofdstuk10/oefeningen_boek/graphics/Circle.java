@@ -91,4 +91,9 @@ public final class Circle extends Shape{
     public int hashCode() {
         return Objects.hash(super.hashCode(), radius);
     }
+
+    @Override
+    public void draw() {
+
+    }
 }

@@ -2,7 +2,7 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 import java.util.Objects;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable{
 
     // class members
     private static int count;

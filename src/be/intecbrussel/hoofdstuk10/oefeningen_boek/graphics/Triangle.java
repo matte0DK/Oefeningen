@@ -101,6 +101,11 @@ public class Triangle extends Shape {
     public int hashCode() {
         return Objects.hash(super.hashCode(), height, width, perpendicular);
     }
+
+    @Override
+    public void draw() {
+
+    }
 }
 //  OVERRIDE PERIMETER ORIGINAL CODE
 //        if (perpendicular < 0) {
