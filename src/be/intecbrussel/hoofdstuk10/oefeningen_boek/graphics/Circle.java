@@ -92,8 +92,18 @@ public final class Circle extends Shape{
         return Objects.hash(super.hashCode(), radius);
     }
 
-    @Override
-    public void draw() {
 
+    // interface scaleable
+    @Override
+    public void scale(int s) {
+        this.radius *= ((double) s) / 100;
     }
+
+
+    // interface drawable
+    @Override
+    public void draw(DrawingContext dc) {
+        dc.draw(this);
+    }
+
 }

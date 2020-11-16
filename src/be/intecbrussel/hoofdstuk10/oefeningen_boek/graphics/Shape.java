@@ -86,7 +86,4 @@ public abstract class Shape implements Drawable{
         return Objects.hash(x, y);
     }
 
-
-
-
 }

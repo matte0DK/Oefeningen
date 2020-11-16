@@ -7,4 +7,12 @@ public interface Scaleable {
 
     void scale(int s);
 
+    default void scaleDouble() {
+        scale(DOUBLE);
+    }
+
+    default void scaleHalf() {
+        scale(HALF);
+    }
+
 }

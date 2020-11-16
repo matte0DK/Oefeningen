@@ -103,9 +103,17 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public void draw() {
-
+    public void draw(DrawingContext dc) {
+        dc.draw(this);
     }
+
+    @Override
+    public void scale(int s) {
+        this.height *= ((double) s/100);
+        this.width *= ((double) s/100);
+        this.perpendicular *= ((double) s/100);
+    }
+
 }
 //  OVERRIDE PERIMETER ORIGINAL CODE
 //        if (perpendicular < 0) {

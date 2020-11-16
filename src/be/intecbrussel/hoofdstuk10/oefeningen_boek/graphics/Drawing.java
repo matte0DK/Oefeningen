@@ -2,18 +2,18 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 import java.util.Arrays;
 
-public class Drawing {
-    private Shape[] shapes;
+public class Drawing implements Drawable{
+    private Drawable[] shapes;
     private int size;
 
     public Drawing() {
-        shapes = new Shape[100];
+        shapes = new Drawable[100];
     }
 
-    public void add(Shape s) {
+    public void add(Drawable d) {
         int index = findFirstArrSpot();
 
-        boolean isNotAlreadyInDrawing = !containsShape(s);
+        boolean isNotAlreadyInDrawing = !containsShape(d);
         boolean indexIsNotMinusOne = index == -1;
 
 
@@ -23,7 +23,7 @@ public class Drawing {
                 index = shapes.length - 1;
             }
 
-            shapes[index] = s;
+            shapes[index] = d;
             size++;
         }
 
@@ -41,8 +41,8 @@ public class Drawing {
 // andere manier om de add methode te beschrijven, Manu heeft liever de eerste,
 // omdat deze nog redelijk leeg is, dus als men iets moet aanvullen kan dit gemakkelijker aangevult worden.
 
-    public void remove(Shape s) {
-        int index = indexOfShape(s);
+    public void remove(Drawable d) {
+        int index = indexOfShape((Shape) d);
         if (index != 1) {
             shapes[index] = null;
             size--;
@@ -58,7 +58,7 @@ public class Drawing {
     }
 
     // check index of shape.
-    private int indexOfShape(Shape s) {
+    private int indexOfShape(Drawable s) {
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i] != null && shapes[i].equals(s)) {
                 return i;
@@ -70,7 +70,7 @@ public class Drawing {
     }
 
     // check if spots in array are filled with shapes.
-    private boolean containsShape(Shape s) {
+    private boolean containsShape(Drawable s) {
         return indexOfShape(s) != -1;
     }
 
@@ -91,11 +91,30 @@ public class Drawing {
     public String toString() {
         String toString = "";
         toString += "this is my drawing: \n";
-        for (Shape shape :
+        for (Drawable drawable :
                 shapes) {
-            toString += shape.toString() + "\n";
+            toString += drawable.toString() + "\n";
         }
         toString += "Size is: " + size;
         return toString;
     }
+
+    @Override
+    public void draw(DrawingContext dc) {
+        for (Drawable drawing : shapes) {
+            if (drawing != null) {
+                drawing.draw(dc);
+            }
+        }
+    }
+
+    @Override
+    public void scale(int s) {
+        for (Drawable drawing : shapes) {
+            if (drawing != null) {
+                drawing.scale(s);
+            }
+        }
+    }
+
 }

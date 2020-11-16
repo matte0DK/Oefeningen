@@ -104,9 +104,15 @@ public class Rectangle extends Shape {
         return Objects.hash(super.hashCode(), width, height);
     }
 
+    @Override
+    public void draw(DrawingContext dc) {
+        dc.draw(this);
+    }
 
     @Override
-    public void draw() {
-
+    public void scale(int s) {
+        this.height *= ((double) s/100);
+        this.width *= ((double) s/100);
     }
+
 }
