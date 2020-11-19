@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OefeningenArrays.iml" filepath="$PROJECT_DIR$/OefeningenArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OefeningenJavaFundamentals.iml" filepath="$PROJECT_DIR$/OefeningenJavaFundamentals.iml" />
     </modules>
   </component>
 </project>
