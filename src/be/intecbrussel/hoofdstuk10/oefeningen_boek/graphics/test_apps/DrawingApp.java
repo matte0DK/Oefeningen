@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class DrawingApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeSizeException {
         Drawing myDrawing = new Drawing();
 
         for (int i = 0; i < 200; i++) {
@@ -16,7 +16,7 @@ public class DrawingApp {
         System.out.println(myDrawing);
     }
 
-    private static Shape getRandomShape() {
+    private static Shape getRandomShape() throws NegativeSizeException {
         Random rng = new Random();
         int shapeType = rng.nextInt(5);
 

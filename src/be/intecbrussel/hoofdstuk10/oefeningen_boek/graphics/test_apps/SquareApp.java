@@ -1,10 +1,11 @@
 package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
 
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.NegativeSizeException;
 import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Rectangle;
 import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Square;
 
 public class SquareApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeSizeException {
 
         Rectangle myNewSquare = new Rectangle();
         Rectangle myFourthSquare = new Rectangle(8, 4);

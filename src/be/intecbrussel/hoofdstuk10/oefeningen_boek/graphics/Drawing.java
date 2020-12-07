@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Drawing implements Drawable, Iterable{
+public class Drawing implements Drawable, Iterable<Drawable>{
     private Drawable[] shapes;
     private int size;
 

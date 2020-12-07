@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class IteratorApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeSizeException {
         Drawing myDrawing = new Drawing();
 
         IsoScelesTriangle iso = new IsoScelesTriangle();

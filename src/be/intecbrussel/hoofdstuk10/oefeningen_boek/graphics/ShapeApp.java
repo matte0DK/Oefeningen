@@ -3,7 +3,7 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 import java.util.Random;
 
 public class ShapeApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeSizeException {
 
         Rectangle rectangle = new Rectangle(13,51,48,66);
         Square square = new Square(13,48,66);

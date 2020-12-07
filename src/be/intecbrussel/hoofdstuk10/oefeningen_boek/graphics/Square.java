@@ -12,15 +12,15 @@ public final class Square extends Rectangle {
     public final String DESCRIPTION = "Square";
 
     // constructors
-    public Square() { this(10,1,1); }
+    public Square() throws NegativeSizeException { this(10,1,1); }
 
-    public Square(int side) {
+    public Square(int side) throws NegativeSizeException {
         this(side, 1,1);
     }
 
-    public Square(int side, int xPos, int yPos) { super(side, side, xPos, yPos); }
+    public Square(int side, int xPos, int yPos) throws NegativeSizeException { super(side, side, xPos, yPos); }
 
-    public Square(Square square) {
+    public Square(Square square) throws NegativeSizeException {
         this(square.getSide());
     }
 
@@ -30,18 +30,18 @@ public final class Square extends Rectangle {
     }
 
     // setters
-    public final void setSide(int side) {
+    public final void setSide(int side) throws NegativeSizeException {
         super.setHeight(side);
         super.setWidth(side);
     }
 
     @Override
-    public void setHeight(int height) {
+    public void setHeight(int height) throws NegativeSizeException {
         setSide(height);
     }
 
     @Override
-    public void setWidth(int width) {
+    public void setWidth(int width) throws NegativeSizeException {
         setSide(width);
     }
 

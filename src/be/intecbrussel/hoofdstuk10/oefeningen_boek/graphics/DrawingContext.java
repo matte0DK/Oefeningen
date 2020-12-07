@@ -6,5 +6,4 @@ public interface DrawingContext {
     void draw(Triangle triangle);
     void draw(Circle circle);
 
-
 }

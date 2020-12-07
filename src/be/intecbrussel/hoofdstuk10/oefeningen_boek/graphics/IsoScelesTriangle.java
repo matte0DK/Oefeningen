@@ -26,13 +26,13 @@ public final class IsoScelesTriangle extends Triangle{
 
     // setters
     @Override
-    public void setWidth(int width) {
+    public void setWidth(int width) throws NegativeSizeException {
         super.setWidth(width);
         super.setPerpendicular(width/2);
     }
 
     @Override
-    public void setPerpendicular(int perpendicular) {
+    public void setPerpendicular(int perpendicular) throws NegativeSizeException {
         super.setPerpendicular(perpendicular);
         super.setWidth(perpendicular * 2);
     }

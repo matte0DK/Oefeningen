@@ -1,11 +1,12 @@
 package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.test_apps;
 
+import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.NegativeSizeException;
 import be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics.Rectangle;
 
 public class RectangleApp {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeSizeException {
         Rectangle myRectangle = new Rectangle();
         Rectangle mySecondRectangle = new Rectangle(20, 10);
         Rectangle newRectangle = new Rectangle(mySecondRectangle);
