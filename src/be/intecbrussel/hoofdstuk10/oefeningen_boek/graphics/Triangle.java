@@ -31,16 +31,22 @@ public class Triangle extends Shape {
 
     // setters
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setHeight(int height) throws NegativeSizeException {
+        if (height < 0) {
+            throw new NegativeSizeException();
+        }
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public void setWidth(int width) throws NegativeSizeException {
+        if (width < 0) {
+            throw new NegativeSizeException();
+        }
     }
 
-    public void setPerpendicular(int perpendicular) {
-        this.perpendicular = perpendicular;
+    public void setPerpendicular(int perpendicular) throws NegativeSizeException {
+        if (perpendicular < 0) {
+            throw new NegativeSizeException();
+        }
     }
 
     // getters

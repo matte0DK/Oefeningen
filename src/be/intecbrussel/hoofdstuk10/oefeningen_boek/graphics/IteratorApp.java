@@ -27,6 +27,5 @@ public class IteratorApp {
         for (Object o : myDrawing) {
             System.out.println(o);
         }
-
     }
 }

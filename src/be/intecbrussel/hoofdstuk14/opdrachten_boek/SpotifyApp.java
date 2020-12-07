@@ -4,5 +4,7 @@ public class SpotifyApp {
     public static void main(String[] args) {
         Musician artist = new Musician();
         artist.play();
+
+
     }
 }

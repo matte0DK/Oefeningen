@@ -2,6 +2,7 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Drawing implements Drawable, Iterable{
     private Drawable[] shapes;
@@ -139,8 +140,14 @@ public class Drawing implements Drawable, Iterable{
         }
 
         @Override
-        public Object next() {
-            return shapes[index];
+        public Object next() throws NoSuchElementException {
+            for (int i = index + 1; i < shapes.length; i++) {
+                if (shapes[i] != null) {
+                    index = i;
+                    return shapes[i];
+                }
+            }
+            throw new NoSuchElementException("No figure left on this drawing!");
         }
     }
 }

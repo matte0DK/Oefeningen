@@ -15,25 +15,25 @@ public class Rectangle extends Shape {
     private int height;
 
     // constructors
-    public Rectangle() {
+    public Rectangle() throws NegativeSizeException {
         this(1, 2);
     }
 
 
-    public Rectangle(int width, int height) {
+    public Rectangle(int width, int height) throws NegativeSizeException {
         setWidth(width);
         setHeight(height);
 //        count++;
     }
 
-    public Rectangle(int width, int height, int xPos, int yPos) {
+    public Rectangle(int width, int height, int xPos, int yPos) throws NegativeSizeException {
         setPositions(xPos, yPos);
         setWidth(width);
         setHeight(height);
     }
 
     /* copy constructor */
-    public Rectangle(Rectangle newRectangle) {
+    public Rectangle(Rectangle newRectangle) throws NegativeSizeException {
         this(newRectangle.width, newRectangle.height, newRectangle.getX(), newRectangle.getY());
 //        setWidth(newRectangle.width);
 //        setHeight(newRectangle.height);
@@ -43,12 +43,17 @@ public class Rectangle extends Shape {
     }
 
     // setters
-    public void setWidth(int newWidth) {
-        width = Math.abs(newWidth);
+    public void setWidth(int newWidth) throws NegativeSizeException {
+        if (width < 0) {
+            throw new NegativeSizeException();
+        }
     }
 
-    public void setHeight(int newHeight) {
-        height = Math.abs(newHeight);
+    public void setHeight(int newHeight) throws NegativeSizeException {
+
+        if (height < 0) {
+            throw new NegativeSizeException();
+        }
     }
 
     // getters
