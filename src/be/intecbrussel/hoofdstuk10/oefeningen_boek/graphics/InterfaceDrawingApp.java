@@ -2,7 +2,7 @@ package be.intecbrussel.hoofdstuk10.oefeningen_boek.graphics;
 
 public class InterfaceDrawingApp {
     public static void main(String[] args) throws NegativeSizeException {
-        Drawing myBeauDessin = new Drawing();
+        DrawingWithArrays myBeauDessin = new DrawingWithArrays();
         DrawingContext drawingContext = new TextDrawingContext();
 
         IsoScelesTriangle iso = new IsoScelesTriangle();
